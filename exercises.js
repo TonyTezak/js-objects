@@ -269,8 +269,15 @@ console.log(printObj(sumObj))
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
-
-
+function putInPlainBox(obj){
+    for(i=0; i<10; i++){
+        var randomNum = Math.floor(Math.random()*10);
+        obj.contents.push(randomNum);
+    }
+    return obj;
+}
+plainBoxResult = putInPlainBox(plainBox);
+console.log(plainBoxResult)
 /*
 11. Detecting transmission
     Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 
@@ -281,8 +288,15 @@ console.log(printObj(sumObj))
 
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
-
-
+function detectingTransmission(obj){
+    if(obj.automaticTransmission = true){
+        return "Your transmission is automatic"
+    }else{
+        return "Um, please let go of the parking brake!"
+    }
+}
+var isAutomaticTransmission = detectingTransmission(stockCar);
+console.log(isAutomaticTransmission);
 /*
 12.  Who's driving this thing?!
      As you may have noticed that the `stockCar` doesn't have a driver!
@@ -294,8 +308,12 @@ console.log(printObj(sumObj))
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
-
-
+function addDriver(obj, person){
+obj.driver = person;
+return obj;
+}
+var stockCarWithDriver = addDriver(stockCar, plainPerson)
+console.log(stockCarWithDriver);
 
 
 /*
@@ -330,3 +348,6 @@ console.log(printObj(sumObj))
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+function addPassengers (car, names, )
