@@ -59,8 +59,15 @@ console.log('My dog ' + dog.name + ' is ' + dog.age + ' and likes to ' + dog.spe
             
   Console.log the object.
 */
-
-
+var kicks = {}
+kicks.brand = 'Goofy Goober';
+kicks.color = 'cornflower blue';
+kicks.size = '11';
+kicks.price = '50';
+kicks.buy = function(){
+    return 'Now I is a cool kid!'
+}
+console.log(kicks)
 /* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
@@ -71,7 +78,11 @@ console.log('My dog ' + dog.name + ' is ' + dog.age + ' and likes to ' + dog.spe
 
   console.log the object
 */
-
+var plainBox = {}
+plainBox.color = 'blue';
+plainBox.size = '13';
+plainBox.contents = [];
+console.log(plainBox)
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
