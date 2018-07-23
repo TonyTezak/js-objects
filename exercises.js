@@ -13,13 +13,15 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     
     Console.log the object.
 */
-    var books = {
-        title: 'The Obstacle is the Way',
-        author: 'Ryan Holiday',
-        category: 'Self Help',
-        pages: 200
-    }
-  console.log(books)
+
+var books = {
+    title: "The Obstacle is the Way",
+    author: "Ryan Holiday",
+    category: "Self Help",
+    pages: 200,
+}
+console.log(books);
+
 /*
 2.  Declare a variable named `dog` and create the following properties (key-value pairs) to the object:
    
@@ -34,16 +36,15 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
  
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */ 
+
 var dog = {
-    name: 'Sarabi',
-    age: 7,
-    vegeterian: false,
-    color: ['black', 'gold'],
-    speak: function(){
-        return 'bark!'
-    }
+    name: "Sarabi",
+    age : 5,
+vegeterian: false,
+color: ["brown", "black"],
+speak: "bark!",
 }
-console.log('My dog ' + dog.name + ' is ' + dog.age + ' and likes to ' + dog.speak() + ' at strangers.')
+console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to " + dog.speak + " at strangers.")
 
 //An empty object
 
@@ -59,15 +60,15 @@ console.log('My dog ' + dog.name + ' is ' + dog.age + ' and likes to ' + dog.spe
             
   Console.log the object.
 */
+
 var kicks = {}
-kicks.brand = 'Goofy Goober';
-kicks.color = 'cornflower blue';
-kicks.size = '11';
-kicks.price = '50';
-kicks.buy = function(){
-    return 'Now I is a cool kid!'
-}
-console.log(kicks)
+kicks.brand = "Goofy Goober",
+kicks.color = "cornflower blue",
+kicks.size = 11,
+kicks.price = 64,
+kicks.buy = "Now I is a Goofy Goober!",
+console.log(kicks);
+
 /* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
@@ -78,11 +79,13 @@ console.log(kicks)
 
   console.log the object
 */
+
 var plainBox = {}
-plainBox.color = 'blue';
-plainBox.size = '13';
-plainBox.contents = [];
-console.log(plainBox)
+plainBox.color = "royal Hawaiian",
+plainBox.size = 10,
+plainBox.contents = [],
+console.log(plainBox);
+
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -94,12 +97,13 @@ console.log(plainBox)
 
     console.log the object
 */
+
 var stockCar = {
-    model: 'Dodge',
-    year: '2012',
+    model: "Dodge",
+    year: 2012,
     automaticTransmission: true,
     driver: null,
-    passengers: []
+    passengers: [],
 }
 console.log(stockCar);
 
@@ -119,17 +123,20 @@ console.log(stockCar);
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
-var plainPerson = {}
-function buildPerson(person, nameString, age){
-    person.name = nameString;
-    person.age = age;
-    return person;
-}
-var completePerson = buildPerson(plainPerson, 'Brave Sir Robin', 37);
-console.log(plainPerson);
-console.log(plainPerson.name);
-console.log(plainPerson.age);
 
+ var plainPerson = {}
+
+ function buildPerson(person, nameString, age){
+     person.name = nameString;
+     person.age = age;
+
+     return person;
+ }
+
+var completePerson = buildPerson(plainPerson, "SpongeBob", 19);
+console.log(completePerson);
+console.log(completePerson.name);
+console.log(completePerson.age);
 /*
 7. Display values of objects that are inside an array
    Declare a new variable named `arrayOfObjects` and set it to be [this array of objects
@@ -227,19 +234,7 @@ printOrders(arrayOfObjects)
         Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` 
         to inspect your results.
 */
-var sumObj = {
-    a: 1958,
-    b: 1964,
-    result: undefined
-}
 
-function objectAddition(obj){
-    obj.result = obj.a + obj.b;
-    return obj;
-}
-
-var sumObjResult = objectAddition(sumObj);
-console.log(sumObjResult);
 /*
 9. Print sum function and add as new key-value
    Declare a new function named printObj and a single parameter which will be the object from the challenge just above. 
@@ -256,10 +251,7 @@ console.log(sumObjResult);
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or 
         **create more** objects and invoke your function multiple times.
  */
-function printObj(obj){
-return obj.a + " + " + obj.b + " + " + obj.result
-}
-console.log(printObj(sumObj))
+
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
@@ -269,15 +261,7 @@ console.log(printObj(sumObj))
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
-function putInPlainBox(obj){
-    for(i=0; i<10; i++){
-        var randomNum = Math.floor(Math.random()*10);
-        obj.contents.push(randomNum);
-    }
-    return obj;
-}
-plainBoxResult = putInPlainBox(plainBox);
-console.log(plainBoxResult)
+
 /*
 11. Detecting transmission
     Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 
@@ -288,15 +272,7 @@ console.log(plainBoxResult)
 
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
-function detectingTransmission(obj){
-    if(obj.automaticTransmission = true){
-        return "Your transmission is automatic"
-    }else{
-        return "Um, please let go of the parking brake!"
-    }
-}
-var isAutomaticTransmission = detectingTransmission(stockCar);
-console.log(isAutomaticTransmission);
+
 /*
 12.  Who's driving this thing?!
      As you may have noticed that the `stockCar` doesn't have a driver!
@@ -308,12 +284,7 @@ console.log(isAutomaticTransmission);
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
-function addDriver(obj, person){
-obj.driver = person;
-return obj;
-}
-var stockCarWithDriver = addDriver(stockCar, plainPerson)
-console.log(stockCarWithDriver);
+
 
 
 /*
@@ -350,4 +321,7 @@ console.log(stockCarWithDriver);
  */
 var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
 var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
-function addPassengers (car, names, )
+function addPassengers (car, names, ages){
+
+    return car
+}
