@@ -235,6 +235,21 @@ printOrders(arrayOfObjects)
         to inspect your results.
 */
 
+var sumObj ={
+    a: 58,
+    b: 64,
+    result: 'undefined',
+}
+
+function objectAddition(obj){
+    obj.result = obj.a + obj.b;
+
+    return obj;
+}
+
+var sumObjResult = objectAddition(sumObj);
+console.log(sumObjResult);
+
 /*
 9. Print sum function and add as new key-value
    Declare a new function named printObj and a single parameter which will be the object from the challenge just above. 
@@ -252,6 +267,14 @@ printOrders(arrayOfObjects)
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj(obj){
+   return sumObj.a + " + " + sumObj.b + " = " + sumObj.result;
+
+    return sumobj.output;
+}
+
+console.log(printObj(sumObj));
+
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
@@ -262,6 +285,14 @@ printOrders(arrayOfObjects)
         plainBoxResult and use `console.log` to inspect your results.
  */
 
+function putInPlainBox(obj){
+    plainBox.contents = [3, 5, 6, 7, 8, 9, 10, 20, 25, 30];
+
+    return obj;
+}
+
+var plainBoxResult = putInPlainBox(plainBox);
+console.log(plainBoxResult);
 /*
 11. Detecting transmission
     Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 
@@ -273,6 +304,16 @@ printOrders(arrayOfObjects)
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+function detectingTransmission(obj){
+    if(automaticTransmission = true){
+        return "Your transmission is automatic, totally!"
+    }else{
+        return "One two three SHIFT! that transmission."
+    }
+}
+
+var isAutomaticTransmission = detectingTransmission(stockCar);
+console.log(isAutomaticTransmission);
 /*
 12.  Who's driving this thing?!
      As you may have noticed that the `stockCar` doesn't have a driver!
@@ -285,7 +326,13 @@ printOrders(arrayOfObjects)
       your results. Consider using `plainPerson` as your driver.
  */
 
+function addDriver(obj, person){
+obj.driver = person;
+return obj;
+}
 
+var stockCarWithDriver = addDriver(stockCar, plainPerson);
+console.log(stockCarWithDriver); 
 
 /*
     #Final Boss
